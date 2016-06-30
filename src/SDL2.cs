@@ -43,7 +43,11 @@ namespace SDL2
 		/// <summary>
 		/// Used by DllImport to load the native library.
 		/// </summary>
+#if SDL_LINUX
+		private const string nativeLibName = "libSDL2-2.0.so";
+#else
 		private const string nativeLibName = "SDL2.dll";
+#endif
 
 		#endregion
 
