@@ -44,7 +44,9 @@ namespace SDL2
 		/// Used by DllImport to load the native library.
 		/// </summary>
 #if SDL_LINUX
-		private const string nativeLibName = "libSDL2-2.0.so";
+		private const string nativeLibName = "libSDL2-2.0.so.0";
+#elif SDL_MACOS
+		private const string nativeLibName = "libSDL2-2.0.0.dylib";
 #else
 		private const string nativeLibName = "SDL2.dll";
 #endif
